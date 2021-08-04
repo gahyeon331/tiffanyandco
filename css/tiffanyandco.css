@@ -658,6 +658,9 @@
     .cont02_bg {
         display: none;
     }
+     .cont02_text dl dd br {
+        display: none;
+    }
 
     /* .cont03 */
     .cont03 {
