@@ -163,6 +163,12 @@
     display: none;
 }
 
+@media screen and (max-width: 1024px) {
+    .category > div {
+        opacity: 1;
+        transform: translateY(0)
+    }
+    
 @media screen and (max-width: 767px) {
     .sub_main_visual {
         height: 485px;
