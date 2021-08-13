@@ -1,0 +1,224 @@
+@charset "utf-8";
+@import url(t_common.css);
+
+
+.sub_main_mobile {display: none;}
+.sub_main_visual {
+    width: 100%;
+    height: 360px;
+    margin-top: 100px;
+}
+.sub_main_in {
+    max-width: 1440px;
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+.sub_main_pc {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.sub_main_pc > img {
+    width: 100%;
+}
+.sub_main_text {
+    position: absolute;
+    top: 20%;
+    right: 1.66%;
+    text-align: right;
+}
+.sub_main_text > h1 {
+    margin-bottom: 3%;
+}
+/* nav */
+.sub_nav {
+    max-width: 1440px;
+    width: calc(100% - 48px);
+    margin: 50px auto;
+}
+.sub_nav_in {
+    width: 100%;
+}
+.sub_nav_in li {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+}
+.sub_nav_in li a {
+    font-size: 14px;
+    color: #727272;
+}
+.sub_nav_in li::before {
+    content: '';
+    width: 1px;
+    height: 14px;
+    background-color: #727272;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+}
+.sub_nav_in li:last-child::before {
+    display: none;
+}
+
+/* section */
+.category {
+    max-width: 1440px;
+    width: calc(100% - 48px);
+    margin: 100px auto;
+}
+.category h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.category > div {
+    max-width: 1392px;
+    width: 100%;
+    height: 920px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .8s;
+}
+.category > div.on {
+    opacity: 1;
+    transform: translateY(0);
+}
+.c_top {
+    margin-bottom: 24px;
+}
+
+.prd {
+    width: 23.70%;
+    height: 405px;
+    padding: 1.07%;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    position: relative;
+    float: left;
+    margin-right: 1.72%;
+}
+.prd:last-child {margin-right: 0;}
+.prd > a {width: 100%; height: 100%;}
+.prd > a > div {
+    width: 100%;
+    height: 74.07%;
+    position: relative;
+    overflow: hidden;
+}
+.prd > a > div > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+.prd_cart_button {
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+}
+.prd_cart_button > .add_cart {
+    width: 100%;
+    height: 100%;
+    background-color: #81d8cfb4;
+    color: #333;
+}
+.prd_img:hover .prdImg_hover {
+    opacity: 1;
+}
+.prdImg_hover {
+    opacity: 0;
+    transition: .8s;
+}
+
+.prd > a > dl {
+    width: 100%;
+    height: 26%;
+    padding-top: 8%;
+    box-sizing: border-box;
+}
+.prd > a > dl dt {
+    color: #454545;
+    margin-bottom: 10%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.prd_like {
+    position: absolute;
+    bottom: 4.07%;
+    right: 5.5%;
+}
+.prd_like i {font-size: 20px; color: #333;}
+.prd_like i.fas.fa-heart {
+    color: #81d8d0;
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .sub_main_visual {
+        height: 485px;
+        margin-top: 30px;
+    }
+    .sub_main_in {
+        max-width: 767px;
+        width: 100%;
+    }
+    .sub_main_pc {
+        display: none;
+    }
+    .sub_main_mobile {
+        display: block;
+    }
+    .sub_main_mobile img {
+        width: 100%;
+    }
+    .sub_main_text {
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .sub_nav {
+        margin: 25px;
+    }
+    .category {
+        max-width: 767px;
+        width: calc(100% - 40px);
+        margin: 50px auto;
+    }
+    .category h4 {
+        margin-bottom: 20px;
+    }
+    .category > div {
+        max-width: 727px;
+        height: 1224px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .c_top {
+        margin-bottom: 2.6%;    
+    }
+
+    .prd {
+        width: 48.7%;
+        margin-right: 2.6%;
+        height: 300px;
+    }
+    .prd:nth-child(2n) {
+        margin-right: 0;
+    }
+    .prd:nth-child(1), .prd:nth-child(2) {
+        margin-bottom: 2.6%;
+    }
+
+}
+
